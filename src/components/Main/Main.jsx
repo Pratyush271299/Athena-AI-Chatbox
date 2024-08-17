@@ -24,7 +24,7 @@ const Main = () => {
         {!showResult 
         ?<>
         <div className="greet">
-            <p><span>Hello, Pratyush.</span></p>
+            <p><span>Hello, Dev.</span></p>
             <p>How can I help you today?</p>
         </div>
         <div className="cards">
@@ -67,11 +67,11 @@ const Main = () => {
 
         <div className="main-bottom">
             <div className="search-box">
-                <input onKeyDown={handleEnter} onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Enter a prompt here' />
+                <input onKeyDown={input?handleEnter:null} onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Enter a prompt here' />
                 <div>
                     <img src={assets.gallery_icon} alt="" />
                     <img src={assets.mic_icon} alt="" />
-                    <img onClick={() => onSent()} src={assets.send_icon} alt="" />
+                    {input?<img onClick={() => onSent()} src={assets.send_icon} alt="" />:null}
                 </div>
             </div>
             <p className="bottom-info">
