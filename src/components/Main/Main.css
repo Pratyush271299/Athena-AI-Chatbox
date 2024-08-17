@@ -150,6 +150,7 @@
 .result img{
     width: 40px;
     border-radius: 50%;
+
 }
 
 .result-data{
@@ -189,3 +190,16 @@
     font-weight: 300;
     line-height: 1.8;
 }
+
+.loading {
+    animation: rotation 2.2s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

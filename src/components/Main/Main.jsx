@@ -17,7 +17,7 @@ const Main = () => {
     <div className='main'>
       <div className="nav">
         <p onClick={() => handleNewChat()}>Athena</p>
-        <img src={assets.user_icon} alt="" />
+        <img src={assets.user2_icon} alt="" />
       </div>
       <div className="main-container">
 
@@ -49,11 +49,11 @@ const Main = () => {
         : 
         <div className='result'>
             <div className="result-title">
-                <img src={assets.user_icon} alt="" />
+                <img src={assets.user2_icon} alt="" />
                 <p>{recentPrompt}</p>
             </div>
             <div className="result-data">
-                <img src={assets.gemini_icon} alt="" />
+                <img className={loading?'loading':null} src={assets.gemini_icon} alt="" />
                 {loading 
                 ?<div className='loader'>
                     <hr />
@@ -75,7 +75,7 @@ const Main = () => {
                 </div>
             </div>
             <p className="bottom-info">
-                Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps.
+                Athena may display inaccurate info, including about people, so double-check its responses. Your privacy and Athena Apps.
             </p>
         </div>
       </div>
